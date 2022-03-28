@@ -25,7 +25,7 @@ const RegistrationButton = ({
         })}
         onClick={handleStartingRegistration}
       >
-        Zgarnij upsrawiedliwienie
+        Zgarnij usprawiedliwienie
       </button>
       <div
         className={cn(styles['only-for'], styleUtils['center-el'], {
