@@ -31,8 +31,10 @@ export default function SpeakersGrid({ speakers }: Props) {
               <div>
                 <h2 className={styles.name}>{speaker.name}</h2>
                 <p className={styles.title}>
-                  {`${speaker.title} @ `}
-                  <span className={styles.company}>{speaker.company}</span>
+                  {speaker.title}
+                  <p className={styles.title}>
+                    @ <span className={styles.company}>{speaker.company}</span>
+                  </p>
                 </p>
               </div>
             </div>

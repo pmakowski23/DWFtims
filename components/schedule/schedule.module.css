@@ -3,6 +3,10 @@
   -webkit-overflow-scrolling: touch;
 }
 
+.stage-name {
+  margin: 0;
+}
+
 .container::-webkit-scrollbar {
   display: none;
 }

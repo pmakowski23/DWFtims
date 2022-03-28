@@ -48,10 +48,6 @@ type Props = {
 
 type groupedByTierType = { [tier: string]: Sponsor[] };
 
-{
-  silver: [{}];
-}
-
 export default function SponsorsGrid({ sponsors }: Props) {
   const groupedByTier = sponsors.reduce((reducer, sponsor) => {
     if (!Object.keys(reducer).includes(sponsor.tier)) {
@@ -68,7 +64,18 @@ export default function SponsorsGrid({ sponsors }: Props) {
         .sort((a, b) => groupedByTier[b][0].tierRank - groupedByTier[a][0].tierRank)
         .map(tier => (
           <div key={tier}>
-            <h2 className={styles.tier}>{tier.toUpperCase()}</h2>
+            <div className={styles['name-wrapper']}>
+              <h2 className={styles.tier}>{tier.toUpperCase()}</h2>
+              <Image
+                alt={tier}
+                src={groupedByTier[tier][0].tierIcon}
+                className={styles.image}
+                loading="lazy"
+                title={tier}
+                width={20}
+                height={18}
+              />
+            </div>
             <div className={styles.grid}>
               {groupedByTier[tier]
                 .sort((a, b) => (a.name < b.name ? -1 : 1))

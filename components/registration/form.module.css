@@ -4,7 +4,7 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  min-width: 40%;
+  min-width: 50%;
   border-radius: var(--space-2x);
   background: #111111;
   padding: 1px;
@@ -57,7 +57,8 @@
   width: 100%;
   background: transparent;
   outline: none;
-  height: 56px;
+  height: min-content;
+  min-height: 56px;
   padding-left: 15px;
   padding-right: 15px;
   font-size: var(--text-md);

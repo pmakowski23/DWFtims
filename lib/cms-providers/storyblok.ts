@@ -176,6 +176,9 @@ export async function getAllSponsors(): Promise<Sponsor[]> {
           website {
             url
           }
+          tierIcon {
+            url: filename
+          }
           tier
           tierRank
         }

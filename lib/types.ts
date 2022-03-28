@@ -45,6 +45,7 @@ export type Sponsor = {
   tier: string;
   tierRank: number;
   cardImage: Image;
+  tierIcon: string;
   logo: Image;
 };
 

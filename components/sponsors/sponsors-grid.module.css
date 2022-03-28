@@ -10,6 +10,12 @@
   cursor: pointer;
 }
 
+.name-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
 .card:hover,
 .card:focus {
   outline: none;
@@ -24,10 +30,8 @@
 }
 
 .tier {
-  width: 100%;
-  padding: 0 var(--space-8x);
+  padding: 0 var(--space-2x) 0 var(--space-8x);
   font-weight: bold;
-
 }
 
 @media (min-width: 768px) {
