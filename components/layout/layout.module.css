@@ -49,8 +49,9 @@
 }
 
 .header-logos {
-  max-width: 200px;
   display: flex;
+  width: 100%;
+  flex-direction: row-reverse;
   align-items: center;
   margin: var(--space-2x) var(--space-4x);
 }
@@ -77,6 +78,11 @@
 @media screen and (min-width: 1032px) {
   .tabs {
     display: initial;
+  }
+
+  .header-logos {
+    max-width: 200px;
+    flex-direction: row;
   }
 
   .tabs > a:nth-child(2),
