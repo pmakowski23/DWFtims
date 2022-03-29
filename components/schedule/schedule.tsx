@@ -17,8 +17,8 @@ function StageRow({ stage }: { stage: Stage }) {
       <h3 className={cn(styles['stage-name'], styles[stage.slug])}>
         <span>
           {stage.name.split(' ').map(part => (
-            <p key={part} className={styles['stage-name']}>
-              {part}
+            <p key={part} className={styles['name-part']}>
+              {part} 
             </p>
           ))}
         </span>

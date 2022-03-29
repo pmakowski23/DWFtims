@@ -25,7 +25,7 @@ const RegistrationButton = ({
         })}
         onClick={handleStartingRegistration}
       >
-        Zgarnij usprawiedliwienie
+        Zapisz się na wydarzenia!
       </button>
       <div
         className={cn(styles['only-for'], styleUtils['center-el'], {

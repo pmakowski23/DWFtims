@@ -109,6 +109,10 @@
   color: red;
 }
 
+.excuse {
+  width: 40%;
+}
+
 .input-label.success {
   background: #0070f3;
 }

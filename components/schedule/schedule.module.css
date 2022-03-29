@@ -32,17 +32,21 @@
   letter-spacing: -0.05em;
   font-weight: 800;
   min-width: 220px;
-  padding-bottom: var(--space-2x);
-  position: absolute;
   left: initial;
+  background: #000;
   color: var(--brand);
+}
+
+.name-part {
+  display: flex;
+  margin: 0;
 }
 
 .talks {
   display: flex;
   flex-direction: row;
   width: 100%;
-  margin-top: 40px;
+  margin-top: var(--space-4x);
 }
 
 .talks > div {
@@ -60,6 +64,10 @@
     flex-direction: row;
     padding: var(--space-8x) 0;
   }
+  .name-part {
+    display: flex;
+    margin: var(--space-4x) 0;
+  }
 
   .talks {
     flex-direction: row;
@@ -70,6 +78,7 @@
     font-size: var(--space-8x);
     position: sticky;
     left: 0;
+    padding-bottom: var(--space-2x);
     padding-left: var(--space-8x);
     z-index: 1;
   }

@@ -17,7 +17,7 @@ export default function Hero({ isRegistrationStarted }: Props) {
 
   return (
     <div className={styles.wrapper}>
-      <h2
+      {/* <h2
         className={cn(
           styleUtils.appear,
           styleUtils['appear-third'],
@@ -29,7 +29,7 @@ export default function Hero({ isRegistrationStarted }: Props) {
         )}
       >
         {SITE_DESCRIPTION}
-      </h2>
+      </h2> */}
       <h1
         className={cn(
           styleUtils.appear,
@@ -57,7 +57,7 @@ export default function Hero({ isRegistrationStarted }: Props) {
       >
         FTIMS
       </h1>
-      <h2
+      {/* <h2
         className={cn(
           styleUtils.appear,
           styleUtils['appear-third'],
@@ -67,7 +67,7 @@ export default function Hero({ isRegistrationStarted }: Props) {
         )}
       >
         {SITE_DESCRIPTION}
-      </h2>
+      </h2> */}
       <div
         className={cn(
           {

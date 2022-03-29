@@ -23,7 +23,7 @@ function CompanyJobs({ jobs }: Props) {
               <p className={styles.description}>{job.description}</p>
             </div>
             <p className={styles.link}>
-              Learn More
+              Oferta
               <svg
                 className={styles.icon}
                 viewBox="0 0 24 24"

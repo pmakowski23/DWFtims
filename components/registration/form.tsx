@@ -108,18 +108,18 @@ export default function Form({ sharePage, allTalks }: Props) {
   return (
     <form
       className={cn(styles.form, styleUtils.appear, {
-        [styles['share-page']]: sharePage
+        [styles["share-page"]]: sharePage,
       })}
       onSubmit={onSubmit}
     >
-      <div className={styles['form-row']}>
-        <div className={styles['full-width']}>
+      <div className={styles["form-row"]}>
+        <div className={styles["full-width"]}>
           <h3>Podaj numer indeksu</h3>
         </div>
         <label
           htmlFor="index-input-field"
-          className={cn(styles['input-label'], {
-            [styles.focused]: focused
+          className={cn(styles["input-label"], {
+            [styles.focused]: focused,
           })}
         >
           <input
@@ -129,7 +129,7 @@ export default function Form({ sharePage, allTalks }: Props) {
             id="index-input-field"
             pattern="[0-9]{6}"
             value={indexNumber}
-            onChange={e => setIndexNumber(e.target.value)}
+            onChange={(e) => setIndexNumber(e.target.value)}
             onFocus={() => setFocused(true)}
             onBlur={() => setFocused(false)}
             placeholder="Wprowadź numer indeksu"
@@ -137,21 +137,21 @@ export default function Form({ sharePage, allTalks }: Props) {
             required
           />
         </label>
-        <div className={styles['full-width']}>
-          <h3 className={styles['choose-label']}>Wybierz wykłady</h3>
+        <div className={styles["full-width"]}>
+          <h3 className={styles["choose-label"]}>Wybierz wykłady</h3>
         </div>
-        {allTalks.map(talk => (
+        {allTalks.map((talk) => (
           <div
-            className={cn(styles['input-label'], styles.input, {
-              [styles.focused]: selectedTalks.includes(talk.title)
+            className={cn(styles["input-label"], styles.input, {
+              [styles.focused]: selectedTalks.includes(talk.title),
             })}
             onClick={() => handleTalkOnClick(talk.title)}
           >
-            <div className={styles['spacing-around']}>{talk.title}</div>
+            <div className={styles["spacing-around"]}>{talk.title}</div>
           </div>
         ))}
-        {formState === 'error' ? (
-          <div className={styles['error-wrapper']}>
+        {formState === "error" ? (
+          <div className={styles["error-wrapper"]}>
             <h5 className={styles.error}>{errorMsg}</h5>
             <button
               type="button"
@@ -162,13 +162,20 @@ export default function Form({ sharePage, allTalks }: Props) {
             </button>
           </div>
         ) : (
-          <div className={styles['submit-wrapper']}>
+          <div className={styles["submit-wrapper"]}>
+            <h5 className={styles.excuse}>
+              Rejestracja gwarantuje usprawiedliwienie z zajęć
+            </h5>
             <button
               type="submit"
               className={cn(styles.submit, styles[formState])}
-              disabled={formState === 'loading'}
+              disabled={formState === "loading"}
             >
-              {formState === 'loading' ? <LoadingDots size={4} /> : <>Zapisz mnie!</>}
+              {formState === "loading" ? (
+                <LoadingDots size={4} />
+              ) : (
+                <>Zapisz mnie!</>
+              )}
             </button>
           </div>
         )}
