@@ -164,7 +164,7 @@ export default function Form({ sharePage, allTalks }: Props) {
         ) : (
           <div className={styles["submit-wrapper"]}>
             <h5 className={styles.excuse}>
-              Rejestracja gwarantuje zwolnienie z zajęć
+              Udział w warsztacie upoważnia do otrzymania zwolnienia z zajęć.
             </h5>
             <button
               type="submit"
