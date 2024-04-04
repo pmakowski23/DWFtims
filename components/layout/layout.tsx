@@ -30,7 +30,7 @@ export default function Layout({ children, className, hideNav, layoutStyles, ful
             <div className={styles['header-container']}>
               <div className={styles['header-logos']}>
                 <MobileMenu key={router.asPath} />
-                <Link href="/">
+                <Link legacyBehavior href="/">
                   <a className={styles.logo}>
                     <Image alt="logo" src="/logo.png" width="48" height="48" />
                   </a>
@@ -38,7 +38,7 @@ export default function Layout({ children, className, hideNav, layoutStyles, ful
               </div>
               <div className={styles.tabs}>
                 {NAVIGATION.map(({ name, route }) => (
-                  <Link key={name} href={route}>
+                  <Link legacyBehavior key={name} href={route}>
                     <a
                       className={cn(styles.tab, {
                         [styles['tab-active']]: activeRoute.startsWith(route)

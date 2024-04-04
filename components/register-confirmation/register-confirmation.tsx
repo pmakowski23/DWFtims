@@ -31,8 +31,9 @@ export default function RegisterConfirmation({ sharePage }: Props) {
           </h2>
           <p className={cn(styles.description, styleUtils.appear, styleUtils['appear-second'])}>
             <>
-              Pomyślnie zarejestrowałeś udział
-              <br className={styleUtils['hide-on-mobile']} />w Dniu Wydziału FTIMS 2022.
+              Pomyślnie zarejestrowałeś się
+              <br className={styleUtils['hide-on-mobile']} />
+              na Dzień Wydziału FTIMS 2024.
             </>
           </p>
         </div>

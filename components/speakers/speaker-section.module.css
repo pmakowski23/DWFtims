@@ -36,10 +36,18 @@
 .bio {
   color: var(--accents-2);
   max-width: 800px;
+  margin-top: 1em;
+  margin-bottom: 1em;
 }
 
 .image {
   border-radius: var(--space-2x);
+  max-width: 100%;
+  position: relative !important;
+}
+
+.linkedin-link:hover > svg > path {
+    fill: #D8D8D8
 }
 
 @media (min-width: 768px) {
@@ -65,7 +73,7 @@
 
   .image {
     max-width: 300px;
-    max-height: 400px;
+    height: auto !important;
   }
 }
 

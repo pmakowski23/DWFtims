@@ -1,7 +1,7 @@
 import cn from 'classnames';
 import styleUtils from '../utils/utils.module.css';
 import styles from './hero.module.css';
-import { DATE, SITE_DESCRIPTION } from '@lib/constants';
+import { DATE } from '@lib/constants';
 
 interface Props {
   isRegistrationStarted: boolean;
@@ -82,7 +82,7 @@ export default function Hero({ isRegistrationStarted }: Props) {
         <p>{DATE}</p>
         <div className={styles['description-separator']} />
         <p>
-          <strong>{isOnline ? 'Online' : 'Offline'}</strong>
+          <strong>{isOnline ? 'Online' : 'Stacjonarnie'}</strong>
         </p>
       </div>
     </div>

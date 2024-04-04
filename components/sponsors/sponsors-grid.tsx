@@ -6,7 +6,7 @@ import styles from './sponsors-grid.module.css';
 
 function SponsorCard({ sponsor }: { sponsor: Sponsor }) {
   return (
-    <Link key={sponsor.name} href={sponsor.website}>
+    <Link legacyBehavior key={sponsor.name} href={sponsor.website}>
       <a
         target="_blank"
         role="button"

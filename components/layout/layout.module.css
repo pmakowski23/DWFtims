@@ -51,9 +51,9 @@
 .header-logos {
   display: flex;
   width: 100%;
-  flex-direction: row-reverse;
-  align-items: center;
+  gap: 15px;
   justify-content: space-between;
+  align-items: center;
   margin: var(--space-2x) var(--space-4x);
 }
 

@@ -108,13 +108,6 @@
   margin: 0;
 }
 
-.description {
-  overflow: hidden;
-  display: -webkit-box;
-  -webkit-line-clamp: 3;
-  -webkit-box-orient: vertical;
-}
-
 .link {
   display: flex;
   align-items: center;

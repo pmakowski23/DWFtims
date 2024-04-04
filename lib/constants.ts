@@ -1,12 +1,12 @@
 export const SITE_URL = 'https://dzienftims.samorzad.p.lodz.pl/';
 export const SITE_ORIGIN = process.env.NEXT_PUBLIC_SITE_ORIGIN || new URL(SITE_URL).origin;
-export const BRAND_NAME = 'WRS FTIMS';
-export const SITE_NAME_MULTILINE = ['WRS', 'FTIMS'];
-export const SITE_NAME = 'WRS FTIMS';
+export const BRAND_NAME = 'WRS WFTIMS';
+export const SITE_NAME_MULTILINE = ['WRS', 'WFTIMS'];
+export const SITE_NAME = 'WRS WFTIMS';
 export const META_DESCRIPTION = '';
-export const SITE_DESCRIPTION = "Zapisz się na prezentacje już teraz!";
-export const DATE = '07.04.2022';
-export const SHORT_DATE = 'kwi 7 - 9:00am CET';
+export const SITE_DESCRIPTION = 'Zapisz się na prezentacje już teraz!';
+export const DATE = '10.04.2024';
+export const SHORT_DATE = 'kwi 10 - 9:00am CET';
 export const COOKIE = 'user-id';
 
 export const CODE_OF_CONDUCT =
@@ -22,7 +22,7 @@ export const NAVIGATION = [
   },
   {
     name: 'Partnerzy',
-    route: '/expo'
+    route: '/partners'
   },
   {
     name: 'Oferty pracy',

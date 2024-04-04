@@ -1,6 +1,6 @@
-import cn from "classnames";
-import styleUtils from "../utils/utils.module.css";
-import styles from "./registration-button.module.css";
+import cn from 'classnames';
+import styleUtils from '../utils/utils.module.css';
+import styles from './registration-button.module.css';
 
 interface RegistrationButtonProps {
   isRegistrationStarted: boolean;
@@ -9,33 +9,28 @@ interface RegistrationButtonProps {
 
 const RegistrationButton = ({
   isRegistrationStarted,
-  handleStartingRegistration,
+  handleStartingRegistration
 }: RegistrationButtonProps) => {
   return (
     <div
-      className={cn(
-        styles.wrapper,
-        styleUtils.appear,
-        styleUtils["appear-fifth"],
-        {
-          [styles["wrapper-hidden"]]: isRegistrationStarted,
-          [styleUtils.disappear]: isRegistrationStarted,
-        }
-      )}
+      className={cn(styles.wrapper, styleUtils.appear, styleUtils['appear-fifth'], {
+        [styles['wrapper-hidden']]: isRegistrationStarted,
+        [styleUtils.disappear]: isRegistrationStarted
+      })}
     >
       <div
-        className={cn(styles["only-for"], styleUtils["center-el"], {
-          [styleUtils["move-to-left"]]: isRegistrationStarted,
+        className={cn(styles['only-for'], styleUtils['center-el'], {
+          [styleUtils['move-to-left']]: isRegistrationStarted
         })}
       >
         Zapisz się na <span className={styles.students}>wydarzenie</span>!
       </div>
-      <div className={styles["buttons-wrapper"]}>
+      <div className={styles['buttons-wrapper']}>
         <div>
           <button
             type="submit"
-            className={cn(styles.register, styleUtils["center-el"], {
-              [styleUtils["move-to-left"]]: isRegistrationStarted,
+            className={cn(styles.register, styleUtils['center-el'], {
+              [styleUtils['move-to-left']]: isRegistrationStarted
             })}
             onClick={handleStartingRegistration}
           >
@@ -43,13 +38,10 @@ const RegistrationButton = ({
           </button>
         </div>
         <div>
-          <a
-            target="_blank"
-            href="https://forms.samorzad.p.lodz.pl/zapisy-na-szkolenia-dzien-wydzialu-ftims/"
-          >
+          <a target="_blank" href="https://forms.gle/XEo4HLDMw49ft9ks9">
             <button
-              className={cn(styles.register, styleUtils["center-el"], {
-                [styleUtils["move-to-left"]]: isRegistrationStarted,
+              className={cn(styles.register, styleUtils['center-el'], {
+                [styleUtils['move-to-left']]: isRegistrationStarted
               })}
             >
               Dla uczniów szkół średnich

@@ -4,9 +4,9 @@ import { GoogleSpreadsheet } from 'google-spreadsheet';
 export default async function register(req: NextApiRequest, res: NextApiResponse) {
   const { indexNumber, talks } = req.body;
 
-  const { CLIENT_EMAIL, PRIVATE_KEY, SHEET_NAME } = process.env;
+  const { CLIENT_EMAIL, PRIVATE_KEY, SHEET_ID, SHEET_NAME } = process.env;
 
-  if (!CLIENT_EMAIL || !PRIVATE_KEY || !SHEET_NAME) {
+  if (!CLIENT_EMAIL || !PRIVATE_KEY || !SHEET_NAME || !SHEET_ID) {
     return res.status(400).json({
       message: 'Env value is missing'
     });
@@ -32,7 +32,7 @@ export default async function register(req: NextApiRequest, res: NextApiResponse
     });
   }
 
-  const doc = new GoogleSpreadsheet('1fTElXLbUPgy2cgP1zO9omKn8vHDwSixkIkSxA9ZHhJA');
+  const doc = new GoogleSpreadsheet(SHEET_ID);
 
   await doc.useServiceAccountAuth({
     client_email: CLIENT_EMAIL,

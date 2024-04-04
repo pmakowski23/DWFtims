@@ -13,10 +13,11 @@
   color: var(--secondary-color);
   font-size: 12px;
   transition: color 0.2s ease;
+  padding-right: 5px;
 }
 
-.footer-link:hover {
-  color: #fff;
+.footer-link:hover > svg > path {
+    fill: #D8D8D8
 }
 
 .footer-logo :global(svg) {
